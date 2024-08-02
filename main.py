@@ -31,6 +31,7 @@ class Category:
         output = self.name.center(30, "*") + "\n"
         for item in self.ledger:
             output += f"{item['description'][:23].ljust(23)}{item['amount']:>7.2f}\n"
+        output += f"Total: {self.get_balance():.2f}"
         return output
     
     

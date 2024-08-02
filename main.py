@@ -30,7 +30,7 @@ class Category:
     def __str__(self):
         output = self.name.center(30, "*") + "\n"
         for item in self.ledger:
-            
+            output += f"{item['description'][:23]}
         return output
     
     

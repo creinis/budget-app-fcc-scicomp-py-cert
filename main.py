@@ -18,9 +18,11 @@ class Category:
         return sum(item["amount"] for item in self.ledger)
     
     def transfer(self, amount, category):
-        self.withdraw(amount, f"Transfer to {category.name}")
-        category.deposit(amount, f"Transfer from {self.name}")
-        
+        if self.check_funds(amount):
+            self.withdraw(amount, f"Transfer to {category.name}")
+            category.deposit(amount, f"Transfer from {self.name}")
+            return True
+        return False
         
     def check_funds(self):
         pass

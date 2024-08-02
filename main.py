@@ -35,6 +35,10 @@ class Category:
         return output
 
 def create_spend_chart(categories):
+    spent = [sum(item["amount"] for item in cat.ledger if item["amount"] < 0) for cat in categories]
+    total = sum(spent)
+    spent_percent = [int(s / total * 10) * 10 for s in spent]
+    
     return chart
     
     

@@ -25,7 +25,7 @@ class Category:
         return False
         
     def check_funds(self, amount):
-        pass
+        return amount <= self.get_balance()
     
     
     

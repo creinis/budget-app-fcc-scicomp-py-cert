@@ -43,7 +43,8 @@ def create_spend_chart(categories):
 
 
     for i in range(100, -1, -10):
-
+        chart += str(i).rjust(3) + "| " + "".join(["o  " if j >= i else "   " for j in spent_percent]) + "\n"
+    
     return chart
     
     

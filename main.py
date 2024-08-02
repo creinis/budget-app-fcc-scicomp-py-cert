@@ -38,13 +38,19 @@ def create_spend_chart(categories):
     spent = [sum(item["amount"] for item in cat.ledger if item["amount"] < 0) for cat in categories]
     total = sum(spent)
     spent_percent = [int(s / total * 10) * 10 for s in spent]
-        
     chart = "Percentage spent by category\n"
-
 
     for i in range(100, -1, -10):
         chart += str(i).rjust(3) + "| " + "".join(["o  " if j >= i else "   " for j in spent_percent]) + "\n"
     
-    return chart
+    chart += "    " + "-" * (len(categories) * 3 + 1) + "\n"
+
+    names = [cat.name for cat in categories]
+    maxlen = max(len(name) for name in names)
+    
+    for i in range(maxlen):
+        chart += "     " + "".join([name[i] + "  " if i < len(name) else "   " for name in names]) + "\n"
+
+    return chart.rstrip() + "  "
     
     

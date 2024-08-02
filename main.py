@@ -35,6 +35,6 @@ class Category:
         return output
 
 def create_spend_chart(categories):
-    pass
+    return chart
     
     

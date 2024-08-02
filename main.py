@@ -24,7 +24,7 @@ class Category:
             return True
         return False
         
-    def check_funds(self):
+    def check_funds(self, amount):
         pass
     
     

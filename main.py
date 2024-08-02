@@ -19,7 +19,9 @@ class Category:
     
     def transfer(self, amount, category):
         self.withdraw(amount, f"Transfer to {category.name}")
-    
+        category.deposit(amount, f"Transfer from {self.name}")
+        
+        
     def check_funds(self):
         pass
     

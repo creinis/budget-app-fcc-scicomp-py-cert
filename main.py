@@ -27,5 +27,7 @@ class Category:
     def check_funds(self, amount):
         return amount <= self.get_balance()
     
+    def __str__(self) -> str:
+        pass
     
     

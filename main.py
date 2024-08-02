@@ -33,6 +33,8 @@ class Category:
             output += f"{item['description'][:23].ljust(23)}{item['amount']:>7.2f}\n"
         output += f"Total: {self.get_balance():.2f}"
         return output
-    
+
+def create_spend_chart(categories):
+    pass
     
     

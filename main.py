@@ -14,10 +14,10 @@ class Category:
             return True
         return False
 
-    def transfer(self, amount, category):
+    def get_balance(self):
         return sum(item["amount"] for item in self.ledger)
     
-    def transfer(self):
+    def transfer(self, amount, category):
         pass
     
     def check_funds(self):

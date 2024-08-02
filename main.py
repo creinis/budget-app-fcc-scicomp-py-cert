@@ -8,7 +8,7 @@ class Category:
     def deposit(self, amount, description=""):
         self.ledger.append({"amount": amount, "description": description})
     
-    def withdraw(self):
+    def withdraw(self, amount, description=""):
         pass
     
     def get_balance(self):

@@ -5,7 +5,7 @@ class Category:
         self.name = name
         self.ledger = []
 
-    def deposit(self):
+    def deposit(self, amount, description=""):
         pass
     
     def withdraw(self):

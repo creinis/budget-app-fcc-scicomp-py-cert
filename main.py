@@ -14,7 +14,7 @@ class Category:
             return True
         return False
 
-    def get_balance(self):
+    def transfer(self, amount, category):
         return sum(item["amount"] for item in self.ledger)
     
     def transfer(self):

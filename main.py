@@ -5,3 +5,20 @@ class Category:
         self.name = name
         self.ledger = []
 
+    def deposit(self):
+        pass
+    
+    def withdraw(self):
+        pass
+    
+    def get_balance(self):
+        pass
+    
+    def transfer(self):
+        pass
+    
+    def check_funds(self):
+        pass
+    
+    
+    
